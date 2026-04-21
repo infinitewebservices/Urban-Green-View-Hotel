@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Urban Green View Hotel – Relax. Refresh. Reconnect. Peaceful & affordable stays in Weliweriya, Sri Lanka. Book direct for best rates.">
+    <meta name="keywords" content="hotel weliweriya, urban green view hotel, sri lanka hotel, affordable hotel, peaceful stay, weliweriya accommodation">
+    <meta property="og:title" content="Urban Green View Hotel – Peaceful Stays in Weliweriya">
+    <meta property="og:description" content="Experience calm environments, great views & friendly service at unbeatable value.">
+    <meta property="og:type" content="website">
+    <title>Urban Green View Hotel | Peaceful Stays in Weliweriya, Sri Lanka</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: { 50:'#F0FDF4', 100:'#DCFCE7', 200:'#BBF7D0', 300:'#86EFAC', 400:'#4ADE80', 500:'#22C55E', 600:'#16A34A', 700:'#15803D', 800:'#166534', 900:'#14532D', 950:'#052E16' },
+                        earth: { 50:'#FDF8F0', 100:'#F5EBD9', 200:'#EBD5B3', 300:'#D4A574', 400:'#C08B52', 500:'#A0714A' },
+                        sand: { 50:'#FEFCF3', 100:'#FDF6E3', 200:'#FAECD3' }
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .font-display { font-family: 'Playfair Display', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .animate-fade-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fade-up-delay { animation: fadeInUp 0.8s ease-out 0.2s forwards; opacity: 0; }
+        .animate-fade-up-delay2 { animation: fadeInUp 0.8s ease-out 0.4s forwards; opacity: 0; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        .animate-pulse-soft { animation: pulse-soft 2s ease-in-out infinite; }
+
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(5,46,22,0.5) 0%, rgba(5,46,22,0.3) 40%, rgba(5,46,22,0.7) 100%);
+        }
+
+        .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 60px -15px rgba(22,101,52,0.2); }
+
+        .leaf-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5C30 5 45 20 45 35C45 43.28 38.28 50 30 50C21.72 50 15 43.28 15 35C15 20 30 5 30 5Z' fill='none' stroke='%2322C55E' stroke-width='0.5' opacity='0.07'/%3E%3C/svg%3E");
+        }
+
+        .gradient-border {
+            background: linear-gradient(135deg, #22C55E, #16A34A);
+            padding: 2px;
+            border-radius: 16px;
+        }
+        .gradient-border > div {
+            background: white;
+            border-radius: 14px;
+        }
+
+        .urgency-bar {
+            background: linear-gradient(90deg, #052E16, #166534, #052E16);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .whatsapp-float {
+            animation: bounce-in 0.5s ease-out 1s forwards;
+            opacity: 0;
+            transform: scale(0);
+        }
+        @keyframes bounce-in {
+            0% { opacity: 0; transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .review-card { transition: all 0.3s ease; }
+        .review-card:hover { transform: scale(1.02); }
+
+        .amenity-icon {
+            transition: all 0.3s ease;
+        }
+        .amenity-icon:hover {
+            transform: translateY(-4px);
+            background-color: #DCFCE7;
+        }
+
+        .sticky-bar {
+            transform: translateY(100%);
+            animation: slide-up 0.5s ease-out 2s forwards;
+        }
+        @keyframes slide-up {
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-white text-forest-950 font-body">
+
+    <!-- Urgency Top Bar -->
+    <div class="urgency-bar text-white text-center py-2 px-4 text-xs sm:text-sm font-medium tracking-wide">
+        <span class="animate-pulse-soft inline-block mr-1">🔥</span>
+        Limited availability – <a href="tel:+94779000139" class="underline font-semibold hover:text-forest-200 transition-colors">Contact now</a> to secure your stay!
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-forest-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-9 h-9 lg:w-10 lg:h-10 bg-forest-600 rounded-xl flex items-center justify-center group-hover:bg-forest-700 transition-colors">
+                        <i data-lucide="trees" class="w-5 h-5 lg:w-6 lg:h-6 text-white"></i>
+                    </div>
+                    <div class="leading-tight">
+                        <span class="font-display font-bold text-forest-900 text-sm lg:text-base block">Urban Green View</span>
+                        <span class="text-[10px] lg:text-xs text-forest-600 font-medium tracking-wider uppercase">Hotel</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="text-sm font-medium text-forest-700 hover:text-forest-900 transition-colors">About</a>
+                    <a href="#rooms" class="text-sm font-medium text-forest-700 hover:text-forest-900 transition-colors">Rooms</a>
+                    <a href="#amenities" class="text-sm font-medium text-forest-700 hover:text-forest-900 transition-colors">Amenities</a>
+                    <a href="#reviews" class="text-sm font-medium text-forest-700 hover:text-forest-900 transition-colors">Reviews</a>
+                    <a href="#location" class="text-sm font-medium text-forest-700 hover:text-forest-900 transition-colors">Location</a>
+                    <a href="tel:+94779000139" class="bg-forest-600 hover:bg-forest-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:shadow-lg hover:shadow-forest-600/25 flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-forest-50 transition-colors" aria-label="Toggle menu">
+                    <i data-lucide="menu" class="w-6 h-6 text-forest-800"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-forest-100 shadow-lg">
+            <div class="px-4 py-4 space-y-1">
+                <a href="#about" class="mobile-link block px-4 py-3 rounded-xl text-forest-700 hover:bg-forest-50 font-medium transition-colors">About</a>
+                <a href="#rooms" class="mobile-link block px-4 py-3 rounded-xl text-forest-700 hover:bg-forest-50 font-medium transition-colors">Rooms</a>
+                <a href="#amenities" class="mobile-link block px-4 py-3 rounded-xl text-forest-700 hover:bg-forest-50 font-medium transition-colors">Amenities</a>
+                <a href="#reviews" class="mobile-link block px-4 py-3 rounded-xl text-forest-700 hover:bg-forest-50 font-medium transition-colors">Reviews</a>
+                <a href="#location" class="mobile-link block px-4 py-3 rounded-xl text-forest-700 hover:bg-forest-50 font-medium transition-colors">Location</a>
+                <div class="pt-2 flex gap-2">
+                    <a href="tel:+94779000139" class="flex-1 bg-forest-600 text-white text-center py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/94779000139?text=Hello!%20I'd%20like%20to%20book%20a%20room%20at%20Urban%20Green%20View%20Hotel." target="_blank" class="flex-1 bg-green-500 text-white text-center py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero" class="relative min-h-[90vh] lg:min-h-[95vh] flex items-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://picsum.photos/seed/green-hotel-forest/1920/1080.jpg" alt="Urban Green View Hotel - Peaceful surroundings" class="w-full h-full object-cover">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute top-20 right-10 w-64 h-64 bg-forest-400/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-10 w-48 h-48 bg-forest-300/10 rounded-full blur-3xl"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+            <div class="max-w-3xl">
+                <!-- Badge -->
+                <div class="animate-fade-up inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-6">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse-soft"></span>
+                    <span class="text-white/90 text-xs sm:text-sm font-medium tracking-wide">Weliweriya, Sri Lanka</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="animate-fade-up font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-4 lg:mb-6">
+                    Relax. Refresh.<br>
+                    <span class="text-green-300">Reconnect.</span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="animate-fade-up-delay text-base sm:text-lg lg:text-xl text-white/80 font-light leading-relaxed mb-8 lg:mb-10 max-w-xl">
+                    Experience peaceful stays at Urban Green View Hotel in Weliweriya — where nature meets comfort at unbeatable value.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="animate-fade-up-delay2 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <a href="tel:+94779000139" class="group bg-white text-forest-900 px-7 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-sm sm:text-base hover:bg-green-50 transition-all shadow-xl shadow-black/10 flex items-center justify-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform"></i>
+                        Book Now
+                    </a>
+                    <a href="https://wa.me/94779000139?text=Hello!%20I'd%20like%20to%20check%20availability%20at%20Urban%20Green%20View%20Hotel." target="_blank" class="group bg-green-500/90 backdrop-blur text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-sm sm:text-base hover:bg-green-500 transition-all shadow-xl shadow-black/10 flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform"></i>
+                        WhatsApp Us
+                    </a>
+                    <a href="#rooms" class="group border-2 border-white/30 text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-sm sm:text-base hover:bg-white/10 backdrop-blur transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="bed-double" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+                        Check Rooms
+                    </a>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="animate-fade-up-delay2 flex flex-wrap items-center gap-4 sm:gap-6 mt-8 lg:mt-10 pt-8 border-t border-white/10">
+                    <div class="flex items-center gap-2">
+                        <div class="flex -space-x-0.5">
+                            <span class="text-yellow-400 text-lg">★★★★</span><span class="text-yellow-400/50 text-lg">★</span>
+                        </div>
+                        <span class="text-white/80 text-sm font-medium">3.9/5</span>
+                    </div>
+                    <div class="w-px h-5 bg-white/20 hidden sm:block"></div>
+                    <div class="flex items-center gap-1.5 text-white/70 text-sm">
+                        <i data-lucide="users" class="w-4 h-4"></i>
+                        <span>39+ Reviews</span>
+                    </div>
+                    <div class="w-px h-5 bg-white/20 hidden sm:block"></div>
+                    <div class="flex items-center gap-1.5 text-white/70 text-sm">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-green-400"></i>
+                        <span>Verified Hotel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+            <i data-lucide="chevron-down" class="w-6 h-6 text-white/50"></i>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="py-16 lg:py-24 bg-sand-50 leaf-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <!-- Image Side -->
+                <div class="relative">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl shadow-forest-900/10">
+                        <img src="https://picsum.photos/seed/hotel-garden-peaceful/800/600.jpg" alt="Urban Green View Hotel surroundings" class="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover">
+                    </div>
+                    <!-- Floating Card -->
+                    <div class="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-6 bg-white rounded-2xl shadow-xl p-4 sm:p-5 border border-forest-100">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 bg-forest-100 rounded-xl flex items-center justify-center">
+                                <i data-lucide="heart" class="w-5 h-5 text-forest-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-forest-900 text-lg">39+</p>
+                                <p class="text-xs text-forest-600">Happy Guests</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative -->
+                    <div class="absolute -top-4 -left-4 w-20 h-20 bg-forest-200/30 rounded-full blur-xl -z-10"></div>
+                </div>
+
+                <!-- Content Side -->
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-forest-100 rounded-full px-4 py-1.5 mb-5">
+                        <i data-lucide="info" class="w-3.5 h-3.5 text-forest-600"></i>
+                        <span class="text-xs font-semibold text-forest-700 uppercase tracking-wider">About Us</span>
+                    </div>
+                    <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950 tracking-tight mb-5 lg:mb-6">
+                        Your Peaceful<br>Getaway Awaits
+                    </h2>
+                    <p class="text-forest-700 text-base lg:text-lg leading-relaxed mb-6 lg:mb-8">
+                        Urban Green View Hotel offers a calm and relaxing environment with all essential amenities for a comfortable stay. Perfect for vacations, business trips, and peaceful getaways surrounded by nature's beauty.
+                    </p>
+
+                    <!-- Highlight Features -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="leaf" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-forest-900 mb-0.5">Quiet Environment</h4>
+                                <p class="text-sm text-forest-600">Nestled away from the city noise for total relaxation</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="smile" class="w-5 h-5 text-amber-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-forest-900 mb-0.5">Friendly Customer Service</h4>
+                                <p class="text-sm text-forest-600">Our team goes above and beyond to make you feel at home</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="badge-indian-rupee" class="w-5 h-5 text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-forest-900 mb-0.5">Great Value for Money</h4>
+                                <p class="text-sm text-forest-600">Affordable rates without compromising on comfort or quality</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="tel:+94779000139" class="inline-flex items-center gap-2 bg-forest-600 hover:bg-forest-700 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:shadow-lg hover:shadow-forest-600/25">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section id="why-us" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <div class="inline-flex items-center gap-2 bg-forest-100 rounded-full px-4 py-1.5 mb-5">
+                    <i data-lucide="award" class="w-3.5 h-3.5 text-forest-600"></i>
+                    <span class="text-xs font-semibold text-forest-700 uppercase tracking-wider">Why Choose Us</span>
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950 tracking-tight mb-4">
+                    What Sets Us Apart
+                </h2>
+                <p class="text-forest-600 text-base lg:text-lg max-w-2xl mx-auto">
+                    Discover why guests return to Urban Green View Hotel for their perfect getaway
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-4">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-forest-50 rounded-2xl p-6 lg:p-5 text-center border border-forest-100/50">
+                    <div class="w-14 h-14 bg-green-200/60 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="trees" class="w-7 h-7 text-green-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-forest-900 mb-2 text-sm lg:text-base">Peaceful & Quiet</h3>
+                    <p class="text-xs text-forest-600 leading-relaxed">Escape the noise in our serene, nature-surrounded location</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="card-hover bg-amber-50 rounded-2xl p-6 lg:p-5 text-center border border-amber-100/50">
+                    <div class="w-14 h-14 bg-amber-200/60 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="hand-heart" class="w-7 h-7 text-amber-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-forest-900 mb-2 text-sm lg:text-base">Friendly Service</h3>
+                    <p class="text-xs text-forest-600 leading-relaxed">Warm hospitality that makes you feel right at home</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="card-hover bg-emerald-50 rounded-2xl p-6 lg:p-5 text-center border border-emerald-100/50">
+                    <div class="w-14 h-14 bg-emerald-200/60 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="piggy-bank" class="w-7 h-7 text-emerald-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-forest-900 mb-2 text-sm lg:text-base">Great Value</h3>
+                    <p class="text-xs text-forest-600 leading-relaxed">Affordable comfort that doesn't break the bank</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="card-hover bg-rose-50 rounded-2xl p-6 lg:p-5 text-center border border-rose-100/50">
+                    <div class="w-14 h-14 bg-rose-200/60 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="w-7 h-7 text-rose-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-forest-900 mb-2 text-sm lg:text-base">Family Friendly</h3>
+                    <p class="text-xs text-forest-600 leading-relaxed">Perfect for couples, families & group stays</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="card-hover bg-sky-50 rounded-2xl p-6 lg:p-5 text-center border border-sky-100/50">
+                    <div class="w-14 h-14 bg-sky-200/60 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="mountain-snow" class="w-7 h-7 text-sky-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-forest-900 mb-2 text-sm lg:text-base">Great Views</h3>
+                    <p class="text-xs text-forest-600 leading-relaxed">Scenic views & a truly relaxing atmosphere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ROOMS SECTION ===== -->
+    <section id="rooms" class="py-16 lg:py-24 bg-forest-950 relative overflow-hidden">
+        <!-- Decorative -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-forest-800/30 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-green-900/20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 mb-5">
+                    <i data-lucide="bed-double" class="w-3.5 h-3.5 text-green-400"></i>
+                    <span class="text-xs font-semibold text-green-300 uppercase tracking-wider">Rooms & Experience</span>
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4">
+                    Comfort Meets <span class="text-green-400">Serenity</span>
+                </h2>
+                <p class="text-forest-300 text-base lg:text-lg max-w-2xl mx-auto">
+                    Clean, comfortable rooms designed for your relaxation — whether you're here for leisure or business
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Room Card 1 -->
+                <div class="group rounded-2xl overflow-hidden bg-forest-900/50 border border-forest-800/50 card-hover">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/hotel-room-cozy/600/400.jpg" alt="Comfortable room at Urban Green View Hotel" class="w-full h-56 lg:h-64 object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Popular</div>
+                    </div>
+                    <div class="p-5 lg:p-6">
+                        <h3 class="font-display text-xl font-bold text-white mb-2">Comfortable Rooms</h3>
+                        <p class="text-forest-300 text-sm leading-relaxed mb-4">Well-furnished rooms with comfortable bedding, clean interiors, and everything you need for a restful night.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="text-xs bg-forest-800 text-forest-200 px-3 py-1 rounded-full">Clean & Fresh</span>
+                            <span class="text-xs bg-forest-800 text-forest-200 px-3 py-1 rounded-full">Cozy Bed</span>
+                            <span class="text-xs bg-forest-800 text-forest-200 px-3 py-1 rounded-full">Private Bath</span>
+                        </div>
+                        <a href="https://wa.me/94779000139?text=Hello!%20I'd%20like%20to%20book%20a%20room%20at%20Urban%20Green%20View%20Hotel." target="_blank" class="inline-flex items-center gap-2 text-green-400 font-semibold text-sm hover:text-green-300 transition-colors group/link">
+                            Book This Room
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Room Card 2 -->
+                <div class="group rounded-2xl overflow-hidden bg-forest-900/50 border border-forest-800/50 card-hover">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/hotel-couple-stay/600/400.jpg" alt="Couple friendly hotel room" class="w-full h-56 lg:h-64 object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-3 left-3 bg-rose-500 text-white text-xs font-bold px-3 py-1 rounded-full">Couple Friendly</div>
+                    </div>
+                    <div class="p-5 lg:p-6">
+                        <h3 class="font-display text-xl font-bold text-white mb-2">Couple Retreats</h3>
+                        <p class="text-forest-300 text-sm leading-relaxed mb-4">Peaceful and private rooms ideal for couples seeking a romantic and quiet getaway surrounded by nature.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="text-xs bg-forest-800 text-forest-200 px-3 py-1 rounded-full">Private</span>
+                            <span class="text-xs bg-forest-800 text-forest-200 px-3 py-1 rounded-full">Scenic View</span>
+                            <span class="text-xs bg-forest-800 text-forest-200 px-3 py-1 rounded-full">Quiet</span>
+                        </div>
+                        <a href="https://wa.me/94779000139?text=Hello!%20I'd%20like%20to%20book%20a%20couple-friendly%20room." target="_blank" class="inline-flex items-center gap-2 text-green-400 font-semibold text-sm hover:text-green-300 transition-colors group/link">
+                            Book This Room
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Room Card 3 -->
+                <div class="group rounded-2xl overflow-hidden bg-forest-900/50 border border-forest-800/50 card-hover">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/hotel-family-room/600/400.jpg" alt="Family and business friendly hotel room" class="w-full h-56 lg:h-64 object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-3 left-3 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">Versatile</div>
+                    </div>
+                    <div class="p-5 lg:p-6">
+                        <h3 class="font-display text-xl font-bold text-white mb-2">Family & Business</h3>
+                        <p class="text-forest-300 text-sm leading-relaxed mb-4">Spacious rooms suitable for family vacations and business travelers. Work remotely or unwind — your choice.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="text-xs bg-forest-800 text-forest-200 px-3 py-1 rounded-full">Spacious</span>
+                            <span class="text-xs bg-forest-800 text-forest-200 px-3 py-1 rounded-full">Wi-Fi</span>
+                            <span class="text-xs bg-forest-800 text-forest-200 px-3 py-1 rounded-full">Work Desk</span>
+                        </div>
+                        <a href="https://wa.me/94779000139?text=Hello!%20I'd%20like%20to%20book%20a%20family/business%20room." target="_blank" class="inline-flex items-center gap-2 text-green-400 font-semibold text-sm hover:text-green-300 transition-colors group/link">
+                            Book This Room
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room Features Bar -->
+            <div class="mt-10 lg:mt-14 bg-forest-900/60 border border-forest-800/50 rounded-2xl p-6 lg:p-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 text-center">
+                    <div>
+                        <i data-lucide="sparkles" class="w-6 h-6 text-green-400 mx-auto mb-2"></i>
+                        <p class="text-white font-semibold text-sm">Clean Environment</p>
+                    </div>
+                    <div>
+                        <i data-lucide="wifi" class="w-6 h-6 text-green-400 mx-auto mb-2"></i>
+                        <p class="text-white font-semibold text-sm">Wi-Fi Available</p>
+                    </div>
+                    <div>
+                        <i data-lucide="bath" class="w-6 h-6 text-green-400 mx-auto mb-2"></i>
+                        <p class="text-white font-semibold text-sm">Hot Water</p>
+                    </div>
+                    <div>
+                        <i data-lucide="wind" class="w-6 h-6 text-green-400 mx-auto mb-2"></i>
+                        <p class="text-white font-semibold text-sm">Air Conditioning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GUEST REVIEWS ===== -->
+    <section id="reviews" class="py-16 lg:py-24 bg-sand-50 leaf-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <div class="inline-flex items-center gap-2 bg-forest-100 rounded-full px-4 py-1.5 mb-5">
+                    <i data-lucide="star" class="w-3.5 h-3.5 text-forest-600"></i>
+                    <span class="text-xs font-semibold text-forest-700 uppercase tracking-wider">Guest Reviews</span>
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950 tracking-tight mb-4">
+                    What Our Guests Say
+                </h2>
+                <div class="flex items-center justify-center gap-3 mt-4">
+                    <div class="flex text-yellow-400 text-2xl">★★★★<span class="text-yellow-400/40">★</span></div>
+                    <span class="text-forest-800 font-bold text-xl">3.9</span>
+                    <span class="text-forest-500 text-sm">/ 5 from 39 reviews</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Review 1 -->
+                <div class="review-card bg-white rounded-2xl p-6 lg:p-8 border border-forest-100 shadow-sm">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-forest-700 text-sm lg:text-base leading-relaxed mb-6 italic">
+                        "Great place for relaxation with friendly customer service and calm vibe. The surroundings are peaceful and the staff really makes you feel welcome."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-forest-100">
+                        <div class="w-10 h-10 bg-forest-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-5 h-5 text-forest-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-forest-900 text-sm">Guest Review</p>
+                            <p class="text-xs text-forest-500">Verified Stay</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card bg-white rounded-2xl p-6 lg:p-8 border border-forest-100 shadow-sm">
+                    <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-forest-700 text-sm lg:text-base leading-relaxed mb-6 italic">
+                        "Highly recommend. Great view, quiet and perfect for couples and families. We had an amazing time and will definitely come back again!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-forest-100">
+                        <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-5 h-5 text-amber-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-forest-900 text-sm">Guest Review</p>
+                            <p class="text-xs text-forest-500">Verified Stay</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card bg-white rounded-2xl p-6 lg:p-8 border border-forest-100 shadow-sm">
+                    <div class="flex text-yellow-400 mb-4">★★★★<span class="text-yellow-400/30">★</span></div>
+                    <p class="text-forest-700 text-sm lg:text-base leading-relaxed mb-6 italic">
+                        "Great value for money and peaceful stay. Clean rooms, nice environment, and the price is very reasonable for the quality you get."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-forest-100">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-5 h-5 text-emerald-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-forest-900 text-sm">Guest Review</p>
+                            <p class="text-xs text-forest-500">Verified Stay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review CTA -->
+            <div class="text-center mt-8 lg:mt-10">
+                <a href="https://web.facebook.com/p/Urban-Green-View-Hotel-61557852937371/" target="_blank" class="inline-flex items-center gap-2 text-forest-600 hover:text-forest-800 font-semibold text-sm transition-colors group">
+                    See all reviews on Facebook
+                    <i data-lucide="external-link" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AMENITIES SECTION ===== -->
+    <section id="amenities" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <div class="inline-flex items-center gap-2 bg-forest-100 rounded-full px-4 py-1.5 mb-5">
+                    <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-forest-600"></i>
+                    <span class="text-xs font-semibold text-forest-700 uppercase tracking-wider">Amenities</span>
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950 tracking-tight mb-4">
+                    Everything You Need
+                </h2>
+                <p class="text-forest-600 text-base lg:text-lg max-w-2xl mx-auto">
+                    All the essentials for a comfortable and hassle-free stay
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+                <div class="amenity-icon bg-forest-50 rounded-2xl p-5 lg:p-6 text-center border border-forest-100/50 cursor-default">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 shadow-sm">
+                        <i data-lucide="bed-double" class="w-6 h-6 text-forest-600"></i>
+                    </div>
+                    <p class="font-semibold text-forest-900 text-sm">Comfortable Rooms</p>
+                </div>
+                <div class="amenity-icon bg-forest-50 rounded-2xl p-5 lg:p-6 text-center border border-forest-100/50 cursor-default">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 shadow-sm">
+                        <i data-lucide="car" class="w-6 h-6 text-forest-600"></i>
+                    </div>
+                    <p class="font-semibold text-forest-900 text-sm">Parking Available</p>
+                </div>
+                <div class="amenity-icon bg-forest-50 rounded-2xl p-5 lg:p-6 text-center border border-forest-100/50 cursor-default">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 shadow-sm">
+                        <i data-lucide="leaf" class="w-6 h-6 text-forest-600"></i>
+                    </div>
+                    <p class="font-semibold text-forest-900 text-sm">Relaxing Environment</p>
+                </div>
+                <div class="amenity-icon bg-forest-50 rounded-2xl p-5 lg:p-6 text-center border border-forest-100/50 cursor-default">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 shadow-sm">
+                        <i data-lucide="baby" class="w-6 h-6 text-forest-600"></i>
+                    </div>
+                    <p class="font-semibold text-forest-900 text-sm">Family Friendly</p>
+                </div>
+                <div class="amenity-icon bg-forest-50 rounded-2xl p-5 lg:p-6 text-center border border-forest-100/50 cursor-default">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 shadow-sm">
+                        <i data-lucide="briefcase" class="w-6 h-6 text-forest-600"></i>
+                    </div>
+                    <p class="font-semibold text-forest-900 text-sm">Business Friendly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section id="cta" class="py-16 lg:py-24 bg-forest-600 relative overflow-hidden">
+        <!-- Decorative -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-forest-500/40 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-green-400/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-10 right-10 opacity-10">
+            <i data-lucide="trees" class="w-32 h-32 text-white"></i>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur rounded-full px-4 py-1.5 mb-6">
+                <span class="w-2 h-2 bg-green-300 rounded-full animate-pulse-soft"></span>
+                <span class="text-xs font-semibold text-green-100 uppercase tracking-wider">Limited Rooms Available</span>
+            </div>
+
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4 lg:mb-5">
+                Book Your Peaceful<br>Stay Today
+            </h2>
+            <p class="text-green-100 text-base lg:text-lg max-w-xl mx-auto mb-8 lg:mb-10">
+                Don't miss out on the best rates — book directly and save. Call, WhatsApp, or message us to check availability.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+                <a href="tel:+94779000139" class="group w-full sm:w-auto bg-white text-forest-900 px-8 py-4 rounded-xl font-bold text-base hover:bg-green-50 transition-all shadow-xl shadow-forest-900/20 flex items-center justify-center gap-2.5">
+                    <i data-lucide="phone" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                    Call Now
+                </a>
+                <a href="https://wa.me/94779000139?text=Hello!%20I'd%20like%20to%20book%20a%20room%20at%20Urban%20Green%20View%20Hotel.%20Please%20check%20availability." target="_blank" class="group w-full sm:w-auto bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-bold text-base transition-all shadow-xl shadow-forest-900/20 flex items-center justify-center gap-2.5">
+                    <i data-lucide="message-circle" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                    Message on WhatsApp
+                </a>
+                <a href="mailto:asanthaumesh9009@gmail.com?subject=Room%20Availability%20Inquiry" class="group w-full sm:w-auto bg-white/15 backdrop-blur border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-base hover:bg-white/25 transition-all flex items-center justify-center gap-2.5">
+                    <i data-lucide="mail" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                    Email Us
+                </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap items-center justify-center gap-6 mt-8 lg:mt-10 pt-6 border-t border-white/15">
+                <div class="flex items-center gap-2 text-green-200 text-sm">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                    <span>Direct Booking – Best Price</span>
+                </div>
+                <div class="flex items-center gap-2 text-green-200 text-sm">
+                    <i data-lucide="clock" class="w-4 h-4"></i>
+                    <span>Quick Response</span>
+                </div>
+                <div class="flex items-center gap-2 text-green-200 text-sm">
+                    <i data-lucide="x-circle" class="w-4 h-4"></i>
+                    <span>No Hidden Fees</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCATION SECTION ===== -->
+    <section id="location" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+                <!-- Map -->
+                <div class="rounded-2xl overflow-hidden shadow-xl shadow-forest-900/10 border border-forest-100 h-[350px] lg:h-[480px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5!2d80.08!3d7.04!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sUrban+Green+View+Hotel!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk&q=Urban+Green+View+Hotel+Weliweriya"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Urban Green View Hotel Location Map">
+                    </iframe>
+                </div>
+
+                <!-- Location Details -->
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-forest-100 rounded-full px-4 py-1.5 mb-5">
+                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-forest-600"></i>
+                        <span class="text-xs font-semibold text-forest-700 uppercase tracking-wider">Location</span>
+                    </div>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-forest-950 tracking-tight mb-4">
+                        Find Us in Weliweriya
+                    </h2>
+                    <p class="text-forest-600 text-base lg:text-lg leading-relaxed mb-8">
+                        Conveniently located on Weliweriya - Kirindiwela Road, our hotel is easily accessible while offering the peaceful atmosphere you deserve.
+                    </p>
+
+                    <!-- Address Card -->
+                    <div class="bg-forest-50 rounded-2xl p-5 lg:p-6 border border-forest-100 mb-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-forest-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="navigation" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-forest-900 mb-1">Address</h4>
+                                <p class="text-forest-700 text-sm leading-relaxed">Weliweriya - Kirindiwela Rd,<br>Morahena State, Weliweriya,<br>Sri Lanka</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Getting Here -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="car" class="w-4 h-4 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-forest-900 text-sm">By Car</p>
+                                <p class="text-forest-600 text-sm">Easy access from main roads, free parking on-site</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="train-front" class="w-4 h-4 text-amber-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-forest-900 text-sm">By Train</p>
+                                <p class="text-forest-600 text-sm">Weliweriya railway station nearby</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="bus" class="w-4 h-4 text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-forest-900 text-sm">By Bus</p>
+                                <p class="text-forest-600 text-sm">Regular bus services on Kirindiwela route</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.google.com/maps/search/Urban+Green+View+Hotel+Weliweriya" target="_blank" class="inline-flex items-center gap-2 bg-forest-600 hover:bg-forest-700 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:shadow-lg hover:shadow-forest-600/25">
+                        <i data-lucide="map" class="w-4 h-4"></i>
+                        Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-forest-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-9 h-9 bg-forest-600 rounded-xl flex items-center justify-center">
+                            <i data-lucide="trees" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <div class="leading-tight">
+                            <span class="font-display font-bold text-white text-sm block">Urban Green View</span>
+                            <span class="text-[10px] text-forest-400 font-medium tracking-wider uppercase">Hotel</span>
+                        </div>
+                    </div>
+                    <p class="text-forest-400 text-sm leading-relaxed mb-5">
+                        Your peaceful getaway in Weliweriya. Relax, refresh, and reconnect with nature.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://web.facebook.com/p/Urban-Green-View-Hotel-61557852937371/" target="_blank" class="w-10 h-10 bg-forest-900 hover:bg-forest-800 rounded-xl flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <svg class="w-5 h-5 text-forest-300" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://wa.me/94779000139" target="_blank" class="w-10 h-10 bg-forest-900 hover:bg-forest-800 rounded-xl flex items-center justify-center transition-colors" aria-label="WhatsApp">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-forest-300"></i>
+                        </a>
+                        <a href="tel:+94779000139" class="w-10 h-10 bg-forest-900 hover:bg-forest-800 rounded-xl flex items-center justify-center transition-colors" aria-label="Phone">
+                            <i data-lucide="phone" class="w-5 h-5 text-forest-300"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-white text-sm mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#about" class="text-forest-400 hover:text-white text-sm transition-colors">About Us</a></li>
+                        <li><a href="#rooms" class="text-forest-400 hover:text-white text-sm transition-colors">Rooms</a></li>
+                        <li><a href="#amenities" class="text-forest-400 hover:text-white text-sm transition-colors">Amenities</a></li>
+                        <li><a href="#reviews" class="text-forest-400 hover:text-white text-sm transition-colors">Guest Reviews</a></li>
+                        <li><a href="#location" class="text-forest-400 hover:text-white text-sm transition-colors">Location</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold text-white text-sm mb-4">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="tel:+94779000139" class="flex items-center gap-2.5 text-forest-400 hover:text-white text-sm transition-colors">
+                                <i data-lucide="phone" class="w-4 h-4 flex-shrink-0"></i>
+                                +94 77 900 0139
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:asanthaumesh9009@gmail.com" class="flex items-center gap-2.5 text-forest-400 hover:text-white text-sm transition-colors">
+                                <i data-lucide="mail" class="w-4 h-4 flex-shrink-0"></i>
+                                asanthaumesh9009@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/94779000139" target="_blank" class="flex items-center gap-2.5 text-forest-400 hover:text-white text-sm transition-colors">
+                                <i data-lucide="message-circle" class="w-4 h-4 flex-shrink-0"></i>
+                                WhatsApp Chat
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Address -->
+                <div>
+                    <h4 class="font-semibold text-white text-sm mb-4">Address</h4>
+                    <div class="flex items-start gap-2.5 text-forest-400 text-sm leading-relaxed">
+                        <i data-lucide="map-pin" class="w-4 h-4 flex-shrink-0 mt-0.5"></i>
+                        <p>Weliweriya - Kirindiwela Rd,<br>Morahena State, Weliweriya,<br>Sri Lanka</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Urban+Green+View+Hotel+Weliweriya" target="_blank" class="inline-flex items-center gap-1.5 text-green-400 hover:text-green-300 text-sm font-medium mt-3 transition-colors">
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        View on Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-forest-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p class="text-forest-500 text-xs">
+                    © 2026 Urban Green View Hotel. All rights reserved.
+                </p>
+                <p class="text-forest-600 text-xs">
+                    Developed by <a href="#" class="text-forest-400 hover:text-green-400 font-medium transition-colors">Infinite Web Services</a>
+                </p>
+            </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+    <a href="https://wa.me/94779000139?text=Hello!%20I'd%20like%20to%20inquire%20about%20room%20availability%20at%20Urban%20Green%20View%20Hotel." target="_blank" class="whatsapp-float fixed bottom-20 lg:bottom-6 right-4 lg:right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-xl shadow-green-900/30 transition-all hover:scale-110 group" aria-label="Chat on WhatsApp">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-pulse-soft"></span>
+    </a>
+
+    <!-- ===== STICKY MOBILE BOOKING BAR ===== -->
+    <div class="sticky-bar fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 backdrop-blur-lg border-t border-forest-200 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.1)] px-4 py-3">
+        <div class="flex gap-2">
+            <a href="tel:+94779000139" class="flex-1 bg-forest-600 hover:bg-forest-700 text-white py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                Call Now
+            </a>
+            <a href="https://wa.me/94779000139?text=Hello!%20I'd%20like%20to%20book%20a%20room%20at%20Urban%20Green%20View%20Hotel." target="_blank" class="flex-1 bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                WhatsApp
+            </a>
+            <a href="mailto:asanthaumesh9009@gmail.com?subject=Room%20Booking%20Inquiry" class="bg-forest-100 hover:bg-forest-200 text-forest-700 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center transition-colors">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileMenu.classList.toggle('hidden', !menuOpen);
+            // Update icon
+            const icon = mobileMenuBtn.querySelector('[data-lucide]');
+            if (menuOpen) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuBtn.querySelector('[data-lucide]');
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        let lastScrollY = 0;
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+
+            if (scrollY > 100) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('border-b', 'border-forest-100');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('border-b', 'border-forest-100');
+            }
+
+            lastScrollY = scrollY;
+        }, { passive: true });
+
+        // Scroll-triggered animations using Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.card-hover, .review-card, .amenity-icon').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Stagger animation for grid items
+        document.querySelectorAll('.grid').forEach(grid => {
+            const items = grid.querySelectorAll('.card-hover, .review-card, .amenity-icon');
+            items.forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.08}s`;
+            });
+        });
+
+        // Smooth scroll for anchor links (fallback for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80; // navbar height
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
